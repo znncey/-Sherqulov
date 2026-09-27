@@ -12,72 +12,142 @@
     }
     body {
       min-height: 100vh;
+      background: #050505;
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #ffffff;
-      color: #111111;
     }
-    .card {
+    .container {
       width: 90%;
       max-width: 420px;
       text-align: center;
     }
+    /* Эмблема HS */
+    .logo {
+      width: 76px;
+      height: 76px;
+      margin: 0 auto 28px;
+      border: 1px solid #444;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      font-family: Georgia, serif;
+      font-size: 25px;
+      letter-spacing: -4px;
+    }
+    .logo::before {
+      content: "";
+      position: absolute;
+      width: 62px;
+      height: 62px;
+      border: 1px solid #222;
+      border-radius: 50%;
+    }
+    .logo span {
+      position: relative;
+      left: -2px;
+    }
     h1 {
-      font-size: 28px;
-      font-weight: 600;
-      margin-bottom: 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 27px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 9px;
     }
     .subtitle {
-      font-size: 14px;
       color: #777;
-      margin-bottom: 35px;
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 42px;
     }
-    .button {
-      display: block;
-      width: 100%;
-      padding: 16px;
-      margin: 12px 0;
-      border: 1px solid #e5e5e5;
-      border-radius: 14px;
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+    .link {
+      height: 58px;
+      border: 1px solid #242424;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
       text-decoration: none;
-      color: #111;
-      font-size: 16px;
-      font-weight: 500;
-      transition: 0.2s;
+      color: #fff;
+      transition: all 0.25s ease;
+      background: #090909;
     }
-    .button:hover {
-      background: #f5f5f5;
+    .link:hover {
+      border-color: #555;
+      transform: translateY(-2px);
+      background: #0d0d0d;
+    }
+    .icon {
+      width: 28px;
+      font-size: 19px;
+      color: #aaa;
+      text-align: center;
+    }
+    .text {
+      flex: 1;
+      text-align: center;
+      margin-right: 28px;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+    .arrow {
+      color: #555;
+      font-size: 16px;
     }
     .footer {
-      margin-top: 30px;
-      font-size: 12px;
-      color: #aaa;
+      margin-top: 38px;
+      color: #3d3d3d;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
     }
   </style>
 </head>
 <body>
-  <div class="card">
+  <main class="container">
+    <div class="logo">
+      <span>H</span><span>S</span>
+    </div>
     <h1>Хусниддин Шеркулов</h1>
-    <div class="subtitle">Personal contact</div>
-    <a class="button"
-       href="https://instagram.com/sherqulov.o1"
-       target="_blank">
-      Instagram
-    </a>
-    <a class="button"
-       href="https://t.me/sherqulov1"
-       target="_blank">
-      Telegram
-    </a>
-    <a class="button"
-       href="tel:+998880749939">
-      Позвонить
-    </a>
+    <div class="subtitle">
+      Personal Card
+    </div>
+    <div class="links">
+      <a class="link"
+         href="https://instagram.com/sherqulov.o1"
+         target="_blank">
+        <div class="icon">◎</div>
+        <div class="text">Instagram</div>
+        <div class="arrow">›</div>
+      </a>
+      <a class="link"
+         href="https://t.me/sherqulov1"
+         target="_blank">
+        <div class="icon">✈</div>
+        <div class="text">Telegram</div>
+        <div class="arrow">›</div>
+      </a>
+      <a class="link"
+         href="tel:+998880749939">
+        <div class="icon">⌕</div>
+        <div class="text">+998 88 074 99 39</div>
+        <div class="arrow">›</div>
+      </a>
+    </div>
     <div class="footer">
       Digital Card
     </div>
-  </div>
+  </main>
 </body>
 </html>

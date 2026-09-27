@@ -12,24 +12,26 @@
     }
     body {
       min-height: 100vh;
-      background: #050505;
+      background:
+        radial-gradient(circle at 50% 25%, #071b35 0%, #03070d 30%, #020202 65%);
       color: #ffffff;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
     }
     .container {
       width: 90%;
       max-width: 420px;
       text-align: center;
     }
-    /* Эмблема HS */
+    /* Премиальная эмблема HS */
     .logo {
-      width: 76px;
-      height: 76px;
+      width: 82px;
+      height: 82px;
       margin: 0 auto 28px;
-      border: 1px solid #444;
+      border: 1px solid #2877c7;
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -38,18 +40,22 @@
       font-family: Georgia, serif;
       font-size: 25px;
       letter-spacing: -4px;
+      box-shadow:
+        0 0 18px rgba(30, 110, 190, 0.18),
+        inset 0 0 15px rgba(30, 110, 190, 0.05);
     }
     .logo::before {
       content: "";
       position: absolute;
-      width: 62px;
-      height: 62px;
-      border: 1px solid #222;
+      width: 66px;
+      height: 66px;
+      border: 1px solid #12365c;
       border-radius: 50%;
     }
     .logo span {
       position: relative;
-      left: -2px;
+      color: #dbeeff;
+      text-shadow: 0 0 12px rgba(70, 160, 255, 0.45);
     }
     h1 {
       font-family: Georgia, "Times New Roman", serif;
@@ -60,9 +66,9 @@
       margin-bottom: 9px;
     }
     .subtitle {
-      color: #777;
-      font-size: 12px;
-      letter-spacing: 3px;
+      color: #6688aa;
+      font-size: 11px;
+      letter-spacing: 4px;
       text-transform: uppercase;
       margin-bottom: 42px;
     }
@@ -72,27 +78,32 @@
       gap: 13px;
     }
     .link {
-      height: 58px;
-      border: 1px solid #242424;
-      border-radius: 12px;
+      height: 60px;
+      border: 1px solid #172a3e;
+      border-radius: 13px;
       display: flex;
       align-items: center;
       padding: 0 20px;
       text-decoration: none;
       color: #fff;
       transition: all 0.25s ease;
-      background: #090909;
+      background: rgba(6, 13, 21, 0.82);
+      box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25);
     }
     .link:hover {
-      border-color: #555;
+      border-color: #286ba8;
+      background: rgba(8, 24, 40, 0.95);
       transform: translateY(-2px);
-      background: #0d0d0d;
+      box-shadow:
+        0 8px 30px rgba(20, 100, 180, 0.16);
     }
     .icon {
       width: 28px;
       font-size: 19px;
-      color: #aaa;
+      color: #5ca9ed;
       text-align: center;
+      text-shadow: 0 0 10px rgba(60, 150, 230, 0.3);
     }
     .text {
       flex: 1;
@@ -100,17 +111,27 @@
       margin-right: 28px;
       font-size: 14px;
       letter-spacing: 1px;
+      color: #e9f4ff;
     }
     .arrow {
-      color: #555;
-      font-size: 16px;
+      color: #3d6f9d;
+      font-size: 18px;
     }
     .footer {
       margin-top: 38px;
-      color: #3d3d3d;
-      font-size: 10px;
-      letter-spacing: 3px;
+      color: #29435d;
+      font-size: 9px;
+      letter-spacing: 4px;
       text-transform: uppercase;
+    }
+    /* Тонкая синяя линия */
+    .line {
+      width: 45px;
+      height: 1px;
+      background: #2469a6;
+      margin: 0 auto 20px;
+      opacity: 0.8;
+      box-shadow: 0 0 8px rgba(40, 130, 220, 0.4);
     }
   </style>
 </head>
@@ -119,6 +140,7 @@
     <div class="logo">
       <span>H</span><span>S</span>
     </div>
+    <div class="line"></div>
     <h1>Хусниддин Шеркулов</h1>
     <div class="subtitle">
       Personal Card
